@@ -3,3 +3,79 @@
 @media(max-width:880px){.site-header nav{display:none}.hero{grid-template-columns:1fr;padding-top:62px}.contact-card{max-width:520px}.steps,.form-grid{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr}.calculator{grid-template-columns:1fr}.calculator>span{display:none}.check-layout{grid-template-columns:1fr}.document-list article{grid-template-columns:34px 1fr}.document-list a{grid-column:2}.notice-grid{grid-template-columns:1fr}.quick-notice{margin:0;border-radius:0;flex-direction:column;gap:5px}.revision-alert{flex-direction:column;gap:6px}}
 @media(max-width:540px){.hero{padding:58px 22px}.section{padding:76px 22px}.hero h1{font-size:38px}.hero-actions{flex-direction:column}.button{text-align:center}.contact-card{padding:25px}.write-guide{padding:25px}.document-list article{padding:25px 0}.calculator input{font-size:16px}.checklist{padding:13px 20px}footer{align-items:flex-start;gap:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.form-card{transition:none}}
+
+/* 2026 readability refresh */
+:root{
+  --ink:#20242c;
+  --muted:#5f6876;
+  --line:#e5e8ec;
+  --soft:#f7f8fa;
+  --orange:#e85d18;
+  --orange-dark:#c94b0d;
+  --navy:#1f2a3d;
+}
+body{font-size:16px;word-break:keep-all}
+.site-header{height:70px;padding:0 max(calc((100vw - 1120px)/2),24px)}
+.site-header nav{gap:24px}
+.site-header nav a{color:#3f4651}
+.hero{
+  min-height:auto;
+  padding:72px max(calc((100vw - 1120px)/2),28px) 82px;
+  grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);
+  gap:56px;
+  background:#f6f7f9;
+}
+.hero h1{max-width:720px;font-size:clamp(36px,4.2vw,56px);line-height:1.22;margin-bottom:20px}
+.hero-copy>p:not(.eyebrow){font-size:16px;line-height:1.8;max-width:650px}
+.hero-actions{margin-top:28px}
+.button{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+.contact-card{border-radius:12px;padding:28px;box-shadow:0 14px 32px rgba(31,42,61,.12)}
+.quick-notice{max-width:1120px;margin:-24px auto 0;padding:20px 24px;box-shadow:0 8px 24px rgba(31,42,61,.08)}
+.section{max-width:1120px;margin:0 auto;padding:88px 0}
+.section.tinted,.calculator-section{max-width:none;padding-left:max(calc((100vw - 1120px)/2),28px);padding-right:max(calc((100vw - 1120px)/2),28px)}
+.section-heading{margin-bottom:36px}
+.section-heading h2{font-size:clamp(27px,3vw,38px)}
+.section-heading>p:last-child{font-size:15px;line-height:1.75}
+.steps{gap:28px}
+.steps li{padding:24px 4px}
+.form-grid{gap:16px}
+.form-card{padding:26px;border-radius:10px}
+.form-card:hover{transform:none;border-color:#cfd4da;box-shadow:0 8px 22px rgba(31,42,61,.06)}
+.write-guide{border:1px solid var(--line);border-radius:10px;padding:30px}
+.revision-alert{border-radius:8px}
+.document-list article{padding:24px 4px}
+.document-list p,.steps p,.guide-grid p,.notice-grid p,.faq details p{line-height:1.75}
+.calculator-section{max-width:none}
+.calculator,.calculator-section .section-heading,.calculator-section .example{max-width:960px}
+.checklist,.progress-card{border-radius:10px}
+.notice-grid article{padding:28px}
+.faq{padding-top:64px}
+footer{padding-left:max(calc((100vw - 1120px)/2),28px);padding-right:max(calc((100vw - 1120px)/2),28px)}
+
+@media(max-width:1176px){
+  .section{padding-left:28px;padding-right:28px}
+}
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr;gap:30px;padding-top:52px;padding-bottom:64px}
+  .hero-copy{max-width:700px}
+  .contact-card{max-width:none}
+  .section{padding-top:72px;padding-bottom:72px}
+  .steps{gap:8px}
+}
+@media(max-width:540px){
+  body{font-size:15px}
+  .site-header{height:64px;padding:0 18px}
+  .brand-mark{width:34px;height:34px}
+  .hero{padding:44px 20px 54px}
+  .hero h1{font-size:34px;line-height:1.25}
+  .hero-copy>p:not(.eyebrow){font-size:15px}
+  .quick-notice{padding:18px 20px}
+  .section,.section.tinted,.calculator-section{padding:62px 20px}
+  .section-heading{margin-bottom:28px}
+  .form-card,.write-guide,.progress-card{padding:24px 20px}
+  .guide-grid{gap:20px}
+  .revision-alert{padding:18px}
+  .document-list article{gap:14px}
+  .notice-grid article{padding:24px 20px}
+  footer{padding:34px 20px;flex-direction:column}
+}
