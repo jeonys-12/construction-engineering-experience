@@ -1,6 +1,50 @@
 const departure = document.querySelector("#departure");
 const arrival = document.querySelector("#arrival");
 const result = document.querySelector("#result");
+const dateInputs = [departure, arrival];
+
+const normalizeDateInput = (value) => {
+  const digits = value.replace(/\D/g, "").slice(0, 8);
+  if (digits.length <= 4) return digits;
+  if (digits.length <= 6) return `${digits.slice(0, 4)}-${digits.slice(4)}`;
+  return `${digits.slice(0, 4)}-${digits.slice(4, 6)}-${digits.slice(6)}`;
+};
+
+const parseDateInput = (value) => {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return null;
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  if (year < 1000) return null;
+
+  const date = new Date(0);
+  date.setUTCHours(0, 0, 0, 0);
+  date.setUTCFullYear(year, month - 1, day);
+
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() !== month - 1 ||
+    date.getUTCDate() !== day
+  ) {
+    return null;
+  }
+  return date;
+};
+
+dateInputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    input.value = normalizeDateInput(input.value);
+    input.removeAttribute("aria-invalid");
+  });
+
+  input.addEventListener("blur", () => {
+    if (input.value && !parseDateInput(input.value)) {
+      input.setAttribute("aria-invalid", "true");
+    }
+  });
+});
 
 const formatDate = (date) => new Intl.DateTimeFormat("ko-KR", {
   year: "numeric", month: "long", day: "numeric", timeZone: "UTC"
@@ -11,8 +55,16 @@ document.querySelector("#calculate").addEventListener("click", () => {
     result.textContent = "출국일과 입국일을 모두 입력해 주세요.";
     return;
   }
-  const start = new Date(`${departure.value}T00:00:00Z`);
-  const end = new Date(`${arrival.value}T00:00:00Z`);
+  const start = parseDateInput(departure.value);
+  const end = parseDateInput(arrival.value);
+  if (!start || !end) {
+    if (!start) departure.setAttribute("aria-invalid", "true");
+    if (!end) arrival.setAttribute("aria-invalid", "true");
+    result.textContent = "날짜를 YYYY-MM-DD 형식으로 정확히 입력해 주세요. 예: 2026-12-12";
+    return;
+  }
+  departure.removeAttribute("aria-invalid");
+  arrival.removeAttribute("aria-invalid");
   if (end <= start) {
     result.textContent = "입국일은 출국일보다 늦어야 합니다.";
     return;
