@@ -99,7 +99,7 @@ button, input { font: inherit; }
 
 .hero {
   position: relative;
-  min-height: 410px;
+  min-height: 350px;
   overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(320px, .58fr);
