@@ -168,30 +168,29 @@ button, input { font: inherit; }
 
 .contact-card {
   align-self: center;
-  padding: 20px 22px;
+  padding: 16px 20px;
   color: var(--ink);
   background: #fff;
 }
 .card-index {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   color: var(--orange);
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 1;
 }
-.badge { color: #8a929a; font-size: 10px; letter-spacing: .12em; }
-.contact-card h2 { margin: 4px 0 9px; font-size: 20px; }
+.badge { color: #8a929a; font-size: 9px; letter-spacing: .12em; }
+.contact-card h2 { margin: 3px 0 6px; font-size: 19px; }
 .contact-card dl { margin: 0; }
 .contact-card dl div {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 5px 0;
   border-bottom: 1px solid var(--line);
 }
-.contact-card dt { color: #7a838d; font-size: 13px; }
-.contact-card dd { margin: 0; font-size: 14px; font-weight: 700; }
-.contact-card > p { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.4; }
+.contact-card dt { color: #7a838d; font-size: 12px; }
+.contact-card dd { margin: 0; font-size: 13px; font-weight: 700; }
 
 .quick-notice {
   max-width: var(--content);
@@ -448,7 +447,7 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .hero h1 { font-size: 31px; line-height: 1.24; }
   .hero-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.8; }
   .hero-actions { flex-direction: column; }
-  .contact-card { padding: 18px; }
+  .contact-card { padding: 15px 16px; }
   .quick-notice { display: block; margin: 0; padding: 18px 20px; }
   .quick-notice p { margin-top: 5px; }
   .section, .section.tinted, .calculator-section { padding: 64px 20px; }
