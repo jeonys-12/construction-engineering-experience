@@ -471,9 +471,12 @@ button, input { font: inherit; }
   line-height: 1.55;
 }
 
-/* 사전 확인 영역: 본문 텍스트를 차분한 그레이 톤으로 통일 */
+/* 사전 확인 영역: 보조정보는 그레이 톤, 핵심 안내는 검정으로 구분 */
 .precheck-card-head h3,
 .precheck-intro,
+.precheck-card:nth-child(3) .precheck-note {
+  color: var(--ink);
+}
 .precheck-note,
 .contact-list strong,
 .contact-list a,
