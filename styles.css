@@ -242,15 +242,15 @@ button, input { font: inherit; }
   max-width: none;
   padding-right: max(calc((100vw - var(--content)) / 2), 28px);
   padding-left: max(calc((100vw - var(--content)) / 2), 28px);
-  background: linear-gradient(180deg, #f7f8f9 0%, #fff 100%);
+  background: #fff;
 }
 .precheck-heading {
   max-width: none;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 40px;
+  gap: 48px;
   align-items: end;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 .precheck-title { max-width: 760px; }
 .precheck-title > p:last-child {
@@ -259,18 +259,16 @@ button, input { font: inherit; }
   font-size: 15px;
 }
 .precheck-career-link {
-  min-width: 238px;
+  min-width: 224px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1px 18px;
   align-items: center;
-  padding: 14px 16px;
+  padding: 0 0 7px;
   color: var(--ink);
-  background: #fff;
-  border: 1px solid #dce1e4;
-  border-left: 3px solid var(--orange);
+  border-bottom: 1px solid #b8c0c6;
   text-decoration: none;
-  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  transition: color .2s ease, border-color .2s ease;
 }
 .precheck-career-link span {
   color: var(--muted);
@@ -289,52 +287,54 @@ button, input { font: inherit; }
   font-style: normal;
 }
 .precheck-career-link:hover {
-  border-color: #f0b58f;
-  box-shadow: 0 8px 24px rgba(28, 38, 46, .08);
-  transform: translateY(-1px);
+  color: var(--orange-dark);
+  border-color: var(--orange);
 }
 
 .precheck-list {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 0;
   margin: 0;
   padding: 0;
+  border-top: 1px solid var(--ink);
 }
 .precheck-list > li::marker { content: ""; }
 .precheck-card {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  padding: 26px;
-  background: #fff;
-  border: 1px solid #dfe3e6;
-  border-top: 3px solid #2a3540;
-  box-shadow: 0 8px 24px rgba(24, 32, 39, .045);
+  padding: 26px 30px 4px 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
-.precheck-card--accent { border-top-color: var(--orange); }
+.precheck-card + .precheck-card {
+  padding-right: 30px;
+  padding-left: 30px;
+  border-left: 1px solid var(--line);
+}
+.precheck-card:last-child { padding-right: 0; }
+.precheck-card--accent { border-top: 0; }
 .precheck-card-head {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 17px;
 }
 .precheck-number {
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
-  display: grid;
-  place-items: center;
-  color: var(--orange-dark);
-  background: #fff2e9;
+  width: auto;
+  height: auto;
+  display: block;
+  margin-bottom: 19px;
+  color: var(--orange);
+  background: transparent;
   font-size: 12px;
   font-weight: 800;
   line-height: 1;
 }
 .precheck-card-head small {
   display: block;
-  margin: 1px 0 4px;
+  margin: 0 0 5px;
   color: #8a939b;
   font-size: 9px;
   font-weight: 800;
@@ -356,9 +356,10 @@ button, input { font: inherit; }
 }
 .precheck-note {
   margin: 13px 0 0;
-  padding: 12px 13px;
+  padding: 0 0 0 12px;
   color: var(--muted);
-  background: var(--soft);
+  background: transparent;
+  border-left: 2px solid #dfe3e6;
   font-size: 12px;
   line-height: 1.7;
 }
@@ -386,20 +387,21 @@ button, input { font: inherit; }
 .contact-list a:hover { color: var(--orange-dark); }
 .manual-links {
   display: grid;
-  gap: 7px;
+  gap: 0;
   margin-top: auto;
   padding-top: 17px;
 }
 .manual-links a {
-  min-height: 38px;
+  min-height: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  padding: 8px 11px;
+  padding: 8px 1px;
   color: #3b454e;
-  background: #fff;
-  border: 1px solid #d8dde0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
   font-size: 12px;
   font-weight: 700;
   line-height: 1.4;
@@ -411,12 +413,11 @@ button, input { font: inherit; }
 }
 .manual-links a:hover {
   color: var(--orange-dark);
-  background: #fffaf7;
-  border-color: #efad83;
+  background: transparent;
 }
 .timing-note {
   margin-top: auto;
-  padding-top: 22px;
+  padding-top: 19px;
   border-top: 1px solid var(--line);
 }
 .timing-note span {
@@ -622,8 +623,14 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .precheck-heading { grid-template-columns: 1fr; gap: 20px; align-items: start; }
   .precheck-career-link { width: min(100%, 360px); }
   .precheck-list { grid-template-columns: 1fr; }
-  .precheck-card { padding: 24px; }
-  .precheck-number { margin-bottom: 0; }
+  .precheck-card,
+  .precheck-card + .precheck-card {
+    padding: 24px 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .precheck-card:last-child { border-bottom: 0; }
+  .precheck-number { margin-bottom: 17px; }
   .steps, .form-grid { grid-template-columns: 1fr; }
   .steps li, .steps li + li { padding: 24px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .steps li > span { margin-bottom: 9px; }
@@ -654,7 +661,8 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .section-heading { margin-bottom: 30px; }
   .section-heading h2 { font-size: 29px; }
   .precheck-career-link { width: 100%; min-width: 0; }
-  .precheck-card { padding: 21px 18px; }
+  .precheck-card,
+  .precheck-card + .precheck-card { padding: 21px 0; }
   .precheck-card-head { margin-bottom: 16px; }
   .precheck-card-head h3 { font-size: 17px; }
   .precheck-number { width: 36px; height: 36px; flex-basis: 36px; }
