@@ -245,13 +245,23 @@ button, input { font: inherit; }
   background: #fff;
 }
 .precheck-heading {
+  width: 100%;
   max-width: none;
   display: block;
   margin-bottom: 0;
 }
 .precheck-title {
+  width: 100%;
   max-width: 760px;
+  min-width: 0;
   margin-bottom: 38px;
+}
+.precheck-title h2 {
+  width: 100%;
+  max-width: none;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 .precheck-title > p:last-child {
   margin: 0;
@@ -298,6 +308,7 @@ button, input { font: inherit; }
 }
 
 .precheck-list {
+  width: 100%;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
