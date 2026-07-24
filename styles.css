@@ -385,9 +385,22 @@ button, input { font: inherit; }
 }
 .contact-list span { color: var(--muted); }
 .contact-list strong { color: var(--ink); }
+.contact-list .contact-methods {
+  display: grid;
+  gap: 2px;
+  justify-items: end;
+}
 .contact-list a {
+  color: var(--ink);
   font-weight: 700;
+  line-height: 1.45;
   text-decoration: none;
+  white-space: nowrap;
+}
+.contact-list .contact-methods a:last-child {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
 }
 .contact-list a:hover { color: var(--orange-dark); }
 .manual-links {
@@ -672,7 +685,11 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .precheck-card-head h3 { font-size: 17px; }
   .precheck-number { width: 36px; height: 36px; flex-basis: 36px; }
   .contact-list li { grid-template-columns: 1fr auto; gap: 3px 10px; }
-  .contact-list li > a { grid-column: 1 / -1; }
+  .contact-list .contact-methods {
+    grid-column: 1 / -1;
+    justify-items: start;
+    margin-top: 3px;
+  }
   .write-guide { padding: 23px 20px; }
   .document-list article { grid-template-columns: 32px 1fr; gap: 12px; padding: 22px 0; }
   .document-list a { grid-column: 2; justify-self: start; }
