@@ -426,6 +426,9 @@ button, input { font: inherit; }
   margin-top: auto;
   padding-top: 17px;
 }
+.precheck-card:first-child .manual-links {
+  margin-top: 0;
+}
 .manual-links a {
   min-height: 36px;
   display: flex;
