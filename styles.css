@@ -355,23 +355,18 @@ button, input { font: inherit; }
   line-height: 1.75;
 }
 .precheck-note {
-  margin: 13px 0 0;
-  padding: 0 0 0 12px;
-  color: var(--muted);
-  background: transparent;
-  border-left: 2px solid #dfe3e6;
-  font-size: 12px;
-  line-height: 1.7;
-}
-.precheck-note--primary {
-  margin-top: 16px;
+  margin: 16px 0 0;
   padding: 14px 0 0;
   color: #39434c;
+  background: transparent;
   border-top: 1px solid var(--line);
   border-left: 0;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.75;
+}
+.precheck-note--primary {
+  margin-top: 16px;
 }
 .contact-list {
   list-style: none;
