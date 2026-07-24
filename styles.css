@@ -168,30 +168,30 @@ button, input { font: inherit; }
 
 .contact-card {
   align-self: center;
-  padding: 30px;
+  padding: 24px 26px;
   color: var(--ink);
   background: #fff;
 }
 .card-index {
   display: block;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
   color: var(--orange);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 1;
 }
 .badge { color: #8a929a; font-size: 10px; letter-spacing: .12em; }
-.contact-card h2 { margin: 6px 0 18px; font-size: 23px; }
+.contact-card h2 { margin: 5px 0 12px; font-size: 22px; }
 .contact-card dl { margin: 0; }
 .contact-card dl div {
   display: flex;
   justify-content: space-between;
-  padding: 9px 0;
+  padding: 7px 0;
   border-bottom: 1px solid var(--line);
 }
 .contact-card dt { color: #7a838d; font-size: 13px; }
 .contact-card dd { margin: 0; font-size: 14px; font-weight: 700; }
-.contact-card > p { margin: 18px 0 0; color: var(--muted); font-size: 12px; }
+.contact-card > p { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .quick-notice {
   max-width: var(--content);
@@ -448,7 +448,7 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .hero h1 { font-size: 35px; line-height: 1.25; }
   .hero-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.8; }
   .hero-actions { flex-direction: column; }
-  .contact-card { padding: 24px 21px; }
+  .contact-card { padding: 20px; }
   .quick-notice { display: block; margin: 0; padding: 18px 20px; }
   .quick-notice p { margin-top: 5px; }
   .section, .section.tinted, .calculator-section { padding: 64px 20px; }
