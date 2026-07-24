@@ -238,6 +238,74 @@ button, input { font: inherit; }
 .steps h3 { margin: 0 0 8px; font-size: 19px; }
 .steps p { margin: 0; color: var(--muted); font-size: 14px; }
 
+.precheck-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+.precheck-list > li {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 24px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+.precheck-list > li > span {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 800;
+}
+.precheck-content h3 { margin: 0 0 8px; font-size: 20px; }
+.precheck-intro { margin: 0; color: var(--muted); font-size: 14px; }
+.precheck-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+.precheck-details section {
+  min-width: 0;
+  padding: 22px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+.precheck-details h4 { margin: 0 0 7px; font-size: 16px; }
+.precheck-details p { margin: 0; color: var(--muted); font-size: 13px; }
+.contact-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  color: #4f5963;
+  font-size: 13px;
+}
+.contact-list li + li { margin-top: 5px; }
+.contact-list a { font-weight: 700; text-decoration: none; }
+.contact-list a:hover { color: var(--orange-dark); }
+.precheck-details .precheck-note {
+  margin-top: 11px;
+  color: #86420f;
+}
+.manual-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+.manual-links a {
+  padding: 7px 10px;
+  color: #3b454e;
+  background: #fff;
+  border: 1px solid #d9dde0;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.manual-links a:hover {
+  color: var(--orange-dark);
+  border-color: var(--orange);
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -425,6 +493,8 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .site-header nav { display: none; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 24px; padding: 42px 28px 50px; }
   .contact-card { max-width: 560px; }
+  .precheck-list > li { grid-template-columns: 1fr; gap: 7px; padding: 25px 0; }
+  .precheck-details { grid-template-columns: 1fr; }
   .steps, .form-grid { grid-template-columns: 1fr; }
   .steps li, .steps li + li { padding: 24px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .steps li > span { margin-bottom: 9px; }
