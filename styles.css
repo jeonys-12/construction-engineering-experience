@@ -1425,3 +1425,70 @@ footer {
     transition: none;
   }
 }
+
+/* Mobile hero layout safeguard */
+@media (max-width: 880px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .hero-copy,
+  .contact-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .contact-card {
+    max-width: 560px;
+    justify-self: stretch;
+  }
+
+  .contact-card dd {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: right;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand,
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .hero {
+    gap: 28px;
+    padding: 36px 20px 40px;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(30px, 9.2vw, 34px);
+    line-height: 1.25;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .contact-card {
+    max-width: none;
+    padding: 20px;
+  }
+
+  .contact-card dl div {
+    gap: 12px;
+  }
+
+  .contact-card dt {
+    flex: 0 0 auto;
+  }
+}
