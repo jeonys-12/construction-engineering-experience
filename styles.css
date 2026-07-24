@@ -246,13 +246,13 @@ button, input { font: inherit; }
 }
 .precheck-heading {
   max-width: none;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 48px;
-  align-items: end;
+  display: block;
+  margin-bottom: 0;
+}
+.precheck-title {
+  max-width: 760px;
   margin-bottom: 38px;
 }
-.precheck-title { max-width: 760px; }
 .precheck-title > p:last-child {
   margin: 0;
   color: var(--muted);
@@ -644,7 +644,7 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .site-header nav { display: none; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 24px; padding: 42px 28px 50px; }
   .contact-card { max-width: 560px; }
-  .precheck-heading { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+  .precheck-title { margin-bottom: 30px; }
   .precheck-career-link { width: min(100%, 360px); }
   .precheck-list { grid-template-columns: 1fr; }
   .precheck-card,
@@ -684,12 +684,13 @@ footer p { margin: 5px 0 0; color: #aab2ba; font-size: 12px; }
   .section, .section.tinted, .calculator-section { padding: 64px 20px; }
   .section-heading { margin-bottom: 30px; }
   .section-heading h2 { font-size: 29px; }
+  .precheck-title { margin-bottom: 24px; }
   .precheck-career-link { width: 100%; min-width: 0; }
   .precheck-card,
   .precheck-card + .precheck-card { padding: 21px 0; }
   .precheck-card-head { margin-bottom: 16px; }
   .precheck-card-head h3 { font-size: 17px; }
-  .precheck-number { width: 36px; height: 36px; flex-basis: 36px; }
+  .precheck-number { width: auto; height: auto; flex-basis: auto; }
   .contact-list li { grid-template-columns: 1fr auto; gap: 3px 10px; }
   .contact-list .contact-methods {
     grid-column: 1 / -1;
