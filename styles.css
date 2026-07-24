@@ -471,6 +471,20 @@ button, input { font: inherit; }
   line-height: 1.55;
 }
 
+/* 사전 확인 영역: 본문 텍스트를 차분한 그레이 톤으로 통일 */
+.precheck-card-head h3,
+.precheck-intro,
+.precheck-note,
+.contact-list strong,
+.contact-list a,
+.contact-list .contact-methods a:last-child,
+.manual-links a {
+  color: #65707a;
+}
+.contact-list span {
+  color: #7d8790;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
