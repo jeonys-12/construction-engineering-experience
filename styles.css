@@ -1135,7 +1135,8 @@ footer {
     display: none;
   }
 
-  .check-layout {
+  .check-layout,
+  .submission-summary-list {
     grid-template-columns: 1fr;
   }
 }
@@ -1249,6 +1250,23 @@ footer {
 
   .checklist {
     padding: 8px 18px;
+  }
+
+  .submission-summary {
+    padding: 20px;
+  }
+
+  .submission-summary-head {
+    align-items: flex-start;
+  }
+
+  .submission-summary-head h3 {
+    font-size: 18px;
+  }
+
+  .submission-summary-list > li {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 8px;
   }
 
   footer {
