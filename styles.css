@@ -1610,3 +1610,12 @@ footer {
 .precheck-card .precheck-exception-link a {
   border-top: 0;
 }
+
+/* Align bottom link divider lines */
+.precheck-card .precheck-exception-link {
+  border-top: 0;
+}
+
+.precheck-card .precheck-exception-link a {
+  border-top: 1px solid var(--line);
+}
