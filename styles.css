@@ -1350,26 +1350,33 @@ footer {
   }
 
   .submission-summary {
-    padding: 20px;
+    padding: 0;
   }
 
   .submission-summary-head {
     align-items: flex-start;
+    padding: 20px;
   }
 
   .submission-summary-head h3 {
     font-size: 18px;
   }
 
+  .submission-summary-list {
+    padding: 0 20px;
+  }
+
   .submission-summary-list > li {
     grid-template-columns: 24px minmax(0, 1fr);
     gap: 8px;
+    padding: 16px 0;
   }
 
   .post-submission {
+    grid-template-columns: 1fr;
     align-items: stretch;
-    flex-direction: column;
     gap: 14px;
+    padding: 18px 20px 20px;
   }
 
   .post-submission > a {
