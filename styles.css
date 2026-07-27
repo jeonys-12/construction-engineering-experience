@@ -1502,7 +1502,7 @@ footer {
   gap: 24px;
   margin-top: 16px;
   padding: 18px 20px;
-  color: var(--ink);
+  color: var(--muted);
   background: #fff8f2;
   border: 1px solid #ffd8bd;
   border-radius: var(--radius);
@@ -1545,7 +1545,7 @@ footer {
   justify-content: space-between;
   gap: 18px;
   padding: 8px 12px;
-  color: var(--ink);
+  color: var(--muted);
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
