@@ -962,25 +962,9 @@ input:focus-visible {
 }
 
 .submission-summary-head {
-  display: flex;
-  gap: 16px;
-  align-items: center;
   padding: 22px 24px;
   background: #fff8f2;
   border-bottom: 1px solid rgba(243, 115, 33, 0.28);
-}
-
-.submission-summary-head > span {
-  width: 38px;
-  height: 38px;
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  background: var(--orange);
-  border-radius: var(--radius);
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .submission-summary-head > div {
