@@ -1593,7 +1593,9 @@ footer {
 
 .precheck-card:nth-child(3) .precheck-exception-note {
   margin-top: 24px;
+  padding-top: 20px;
   color: var(--muted);
+  border-top: 1px solid var(--line-muted);
   font-size: 13px;
   font-weight: 600;
   line-height: 1.85;
