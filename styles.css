@@ -1597,17 +1597,14 @@ footer {
   color: var(--muted);
   border-top: 1px solid var(--line-muted);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.85;
 }
 
-.precheck-exception-note span {
-  color: var(--orange-dark);
-}
-
 .precheck-card .precheck-exception-link {
-  margin-top: 12px;
-  padding-top: 0;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-muted);
 }
 
 .precheck-card .precheck-exception-link a {
