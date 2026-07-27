@@ -1504,7 +1504,7 @@ footer {
   padding: 18px 20px;
   color: var(--muted);
   background: #fff8f2;
-  border: 1px solid #ffd8bd;
+  border: 0;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
