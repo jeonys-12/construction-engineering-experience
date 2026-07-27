@@ -1580,10 +1580,23 @@ footer {
 }
 
 /* Headquarters-only reporting guidance moved into precheck item 03 */
+.precheck-card:nth-child(3) .precheck-intro,
+.precheck-card:nth-child(3) .precheck-note {
+  line-height: 1.85;
+}
+
+.precheck-card:nth-child(3) .precheck-note {
+  margin-top: 22px;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .precheck-card:nth-child(3) .precheck-exception-note {
+  margin-top: 24px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 600;
+  line-height: 1.85;
 }
 
 .precheck-exception-note span {
@@ -1591,5 +1604,10 @@ footer {
 }
 
 .precheck-card .precheck-exception-link {
-  margin-top: 0;
+  margin-top: 12px;
+  padding-top: 0;
+}
+
+.precheck-card .precheck-exception-link a {
+  border-top: 0;
 }
