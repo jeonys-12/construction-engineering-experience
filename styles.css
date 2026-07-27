@@ -1594,11 +1594,27 @@ footer {
 .precheck-card:nth-child(3) .precheck-exception-note {
   margin-top: 24px;
   padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: 5px;
   color: var(--muted);
   border-top: 1px solid var(--line-muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.85;
+}
+
+.precheck-exception-mark,
+.precheck-exception-copy {
+  min-width: 0;
+}
+
+@media (max-width: 560px) {
+  .precheck-card:nth-child(3) .precheck-exception-note {
+    column-gap: 4px;
+    font-size: 13px;
+  }
 }
 
 .precheck-card .precheck-exception-link {
