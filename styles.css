@@ -952,6 +952,108 @@ input:focus-visible {
   cursor: pointer;
 }
 
+.submission-summary {
+  margin-top: 16px;
+  padding: 24px;
+  background: #fff8f2;
+  border: 1px solid var(--orange);
+  border-radius: var(--radius);
+  box-shadow: 0 3px 12px rgba(243, 115, 33, 0.12);
+}
+
+.submission-summary-head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(243, 115, 33, 0.28);
+}
+
+.submission-summary-head > span {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  background: var(--orange);
+  border-radius: var(--radius);
+  font-weight: 700;
+}
+
+.submission-summary-head p {
+  margin: 0 0 2px;
+  color: var(--orange-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.submission-summary-head h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.submission-summary-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+  margin: 0;
+  padding: 4px 0 0;
+  list-style: none;
+  counter-reset: submission;
+}
+
+.submission-summary-list > li {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line-muted);
+  counter-increment: submission;
+}
+
+.submission-summary-list > li::before {
+  content: "0" counter(submission);
+  color: var(--orange-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.submission-summary-list strong,
+.submission-summary-list span {
+  display: block;
+}
+
+.submission-summary-list strong {
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.submission-summary-list span,
+.submission-summary-list li li,
+.submission-summary-list p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.625;
+}
+
+.submission-summary-list ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.submission-summary-list p {
+  margin: 8px 0 0;
+}
+
+.submission-summary-list b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
