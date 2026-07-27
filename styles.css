@@ -430,6 +430,12 @@ input:focus-visible {
   line-height: 1.625;
 }
 
+.steps li:nth-child(-n + 2) {
+  background: #fff8f2;
+  border-color: var(--orange);
+  box-shadow: 0 3px 12px rgba(243, 115, 33, 0.12);
+}
+
 .precheck-card {
   display: flex;
   flex-direction: column;
