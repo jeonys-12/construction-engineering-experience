@@ -1578,3 +1578,18 @@ footer {
     width: 100%;
   }
 }
+
+/* Headquarters-only reporting guidance moved into precheck item 03 */
+.precheck-card:nth-child(3) .precheck-exception-note {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.precheck-exception-note span {
+  color: var(--orange-dark);
+}
+
+.precheck-card .precheck-exception-link {
+  margin-top: 0;
+}
