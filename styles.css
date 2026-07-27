@@ -586,6 +586,12 @@ input:focus-visible {
   padding-top: 12px;
 }
 
+.form-card:nth-child(-n + 2) {
+  background: #fff8f2;
+  border-color: var(--orange);
+  box-shadow: 0 3px 12px rgba(243, 115, 33, 0.12);
+}
+
 .form-icon {
   width: 36px;
   height: 36px;
