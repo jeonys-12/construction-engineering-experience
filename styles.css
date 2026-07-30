@@ -264,6 +264,17 @@ input:focus-visible {
   border-color: rgba(31, 35, 40, 0.15);
 }
 
+.hero-actions .button:first-child {
+  color: var(--white);
+  background: var(--dark);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero-actions .button:first-child:hover {
+  background: var(--ink);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
 .contact-card {
   align-self: center;
   padding: 24px;
