@@ -255,13 +255,13 @@ input:focus-visible {
 
 .button.secondary {
   color: var(--white);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: var(--orange);
+  border-color: rgba(31, 35, 40, 0.15);
 }
 
 .button.secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--white);
+  background: var(--orange-dark);
+  border-color: rgba(31, 35, 40, 0.15);
 }
 
 .contact-card {
